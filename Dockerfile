@@ -15,6 +15,11 @@ ADD start.sh /start.sh
 EXPOSE 3000
 EXPOSE 8083
 EXPOSE 8086
+
+VOLUME /var/lib/influxdb
 VOLUME /var/lib/grafana
+VOLUME /etc/influxdb
+VOLUME /etc/grafana
+
 RUN chmod +x /start.sh
 CMD ["/start.sh"]
